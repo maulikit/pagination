@@ -11,9 +11,9 @@ angular.module("dashboardApp").directive('webPagination', function() {
   template: function(element, attrs) {
 
 
-   return "<div class=\"jpag prdpaginationdiv\" id=\"srchpagination\">" +
-    "<div style=\"float:left;display:inline-block;\" class=\"pageinfodiv\" >{{pagearr.info}}</div>" +
-    "<div style=\"float:right;display:inline-block;\">" +
+   return "<div class=\"jpag prdpaginationdiv\" id=\"srchpagination\" style=\"text-align: center;\">" +
+    "<div style=\"float:left;display:inline-block;line-height:48px;\" class=\"pageinfodiv\" >{{pagearr.info}}</div>" +
+    "<div style=\"float:center;display:inline-block;\">" +
     "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
     "<a ng-if=\"page != 1\" class=\"prdpagination prevnxt\" ng-click=\"changePage(1)\">FIRST</a>" +
     "</div>" +
@@ -21,10 +21,10 @@ angular.module("dashboardApp").directive('webPagination', function() {
     "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
     "<a ng-if=\"pagearr.previouspage != 0\" class=\"prdpagination prevnxt\" ng-click=\"changePage(pagearr.previouspage)\">PREVIOUS</a>" +
     "</div>" +
-    "<ul style=\"display: inline-block;\">" +
+    "<ul style=\"display: inline-block;margin: 0;padding: 0;\">" +
     "<li style=\"display:inline-block;display: inline-block;padding: 7px 4px;margin: 5px;cursor: pointer;height: 32px;width: 32px;border-radius: 50%;\" ng-repeat=\"a in pagearr.pagenumbers\" >" +
-    "<span ng-if=\"a == page\" class=\"\"><span class=\"countertext\">{{a}}</span></span>" +
-    "<a ng-if=\"a != page\" class=\"\" ng-click=\"changePage(a)\">{{a}}</a>" +
+    "<a ng-if=\"a == page\" style=\"color:#fff;background-color:#2874f0;border-radius: 50%;display: inline-block;    text-decoration: none;width: 30px; height: 30px;line-height: 30px;\" ng-click=\"changePage(a)\">{{a}}</a>" +
+    "<a ng-if=\"a != page\" ng-click=\"changePage(a)\">{{a}}</a>" +
     "</li>" +
     "</ul>" +
 
