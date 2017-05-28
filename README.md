@@ -13,5 +13,7 @@ How to use?
  ```
  
   
-  
-angular pagination
+ Plunker :
+ 
+ 
+ <iframe style="width: 100%; height: 600px" src="http://embed.plnkr.co/cCRjA5Gb1ZWGQ81aaH37" frameborder="0" allowfullscren="allowfullscren"></iframe>
