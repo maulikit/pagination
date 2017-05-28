@@ -1,4 +1,4 @@
-angular.module("dashboardApp").directive('webPagination', function() {
+angular.module("myApp").directive('webPagination', function() {
 
  return {
   restrict: 'A',
@@ -15,11 +15,11 @@ angular.module("dashboardApp").directive('webPagination', function() {
     "<div style=\"float:left;display:inline-block;line-height:48px;\" class=\"pageinfodiv\" >{{pagearr.info}}</div>" +
     "<div style=\"float:center;display:inline-block;\">" +
     "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
-    "<a ng-if=\"page != 1\" class=\"prdpagination prevnxt\" ng-click=\"changePage(1)\">FIRST</a>" +
+    "<a ng-if=\"page != 1\" ng-click=\"changePage(1)\">FIRST</a>" +
     "</div>" +
 
     "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
-    "<a ng-if=\"pagearr.previouspage != 0\" class=\"prdpagination prevnxt\" ng-click=\"changePage(pagearr.previouspage)\">PREVIOUS</a>" +
+    "<a ng-if=\"pagearr.previouspage != 0\" ng-click=\"changePage(pagearr.previouspage)\">PREVIOUS</a>" +
     "</div>" +
     "<ul style=\"display: inline-block;margin: 0;padding: 0;\">" +
     "<li style=\"display:inline-block;display: inline-block;padding: 7px 4px;margin: 5px;cursor: pointer;height: 32px;width: 32px;border-radius: 50%;\" ng-repeat=\"a in pagearr.pagenumbers\" >" +
@@ -28,11 +28,11 @@ angular.module("dashboardApp").directive('webPagination', function() {
     "</li>" +
     "</ul>" +
 
-    "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
-    "<a ng-if=\"pagearr.lastpage != page\" class=\"prdpagination prevnxt\" href='' ng-click=\"changePage(pagearr.nextpage)\">NEXT</a>" +
+    "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0 !important;padding: 12px 10px;cursor: pointer;\">" +
+    "<a ng-if=\"pagearr.lastpage != page\" href='' ng-click=\"changePage(pagearr.nextpage)\" style=\" text-decoration: none;\">NEXT</a>" +
     "</div>" +
-    "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0;padding: 12px 10px;cursor: pointer;\">" +
-    "<a ng-if=\"pagearr.lastpage != page\" class=\"prdpagination prevnxt\" href='' ng-click=\"changePage(pagearr.lastpage)\">LAST</a>" +
+    "<div style=\"display:inline-block;text-transform: uppercase;display: inline-block;color: #2874f0 !important;padding: 12px 10px;cursor: pointer;\">" +
+    "<a ng-if=\"pagearr.lastpage != page\" href='' ng-click=\"changePage(pagearr.lastpage)\" style=\" text-decoration: none;\">LAST</a>" +
     "</div>" +
     "</div>" +
     "</div>";
@@ -130,7 +130,6 @@ angular.module("dashboardApp").directive('webPagination', function() {
       }
       for (var i = (page_num + 1); i < (page_num + show - 2); i++) {
        if (i == (last_page + 1)) break;
-       console.log(i);
        arr.push(i);
       }
       return arr;
