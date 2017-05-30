@@ -13,4 +13,4 @@ How to use?
  ```
  
   
- Plunker :  http://embed.plnkr.co/cCRjA5Gb1ZWGQ81aaH37
+ Plunker :  http://plnkr.co/cCRjA5Gb1ZWGQ81aaH37
