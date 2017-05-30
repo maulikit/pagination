@@ -24,7 +24,7 @@ angular.module("myApp").directive('webPagination', function() {
     "<ul style=\"display: inline-block;margin: 0;padding: 0;\">" +
     "<li style=\"display:inline-block;display: inline-block;padding: 7px 4px;margin: 5px;cursor: pointer;height: 32px;width: 32px;border-radius: 50%;\" ng-repeat=\"a in pagearr.pagenumbers\" >" +
     "<a ng-if=\"a == page\" style=\"color:#fff;background-color:#2874f0;border-radius: 50%;display: inline-block;    text-decoration: none;width: 30px; height: 30px;line-height: 30px;\" ng-click=\"changePage(a)\">{{a}}</a>" +
-    "<a ng-if=\"a != page\" ng-click=\"changePage(a)\">{{a}}</a>" +
+    "<a ng-if=\"a != page\" style=\"display: inline-block;text-decoration: none;width: 30px; height: 30px;line-height: 30px;\" ng-click=\"changePage(a)\">{{a}}</a>" +
     "</li>" +
     "</ul>" +
 
